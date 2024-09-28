@@ -50,11 +50,11 @@ public class TestStep1 {
 
 	}
 
-//	@Test(expected = IllegalArgumentException.class)
-//	public void should_throw_arguments_when_card_unknown() {
-//		ICard card = new Card("R");
-//
-//		assertTrue(10 == card.getPoints());
-//
-//	}
+	@Test(expected = IllegalArgumentException.class)
+	public void should_throw_arguments_when_card_unknown() {
+		ICard card = new Card("R");
+
+		assertTrue(10 == card.getPoints());
+
+	}
 }
