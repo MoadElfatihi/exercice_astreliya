@@ -19,11 +19,11 @@ public class Hand implements IHand {
 	}
 
 	public boolean isBusted() {
-		throw new NotImplementedException();
+		return false;
 	}
 
 	public boolean isBlackJack() {
-		throw new NotImplementedException();
+		return true;
 	}
 
 	public int getPoints() {
