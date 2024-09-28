@@ -2,20 +2,20 @@ package blackjack;
 
 import org.apache.commons.lang.NotImplementedException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Hand implements IHand {
 
-	private ICard firstCard;
-	private ICard secondCard;
-	private ICard thirdCard;
+	private final List<ICard> cards = new ArrayList<>();
 	
 	public Hand(ICard firstCard, ICard secondCard) {
-		this.firstCard = firstCard;
-		this.secondCard = secondCard;
-		this.thirdCard = new Card("0");
+		this.cards.add(firstCard);
+		this.cards.add(secondCard);
 	}
 	
 	public void addCard(ICard card) {
-		this.thirdCard = card;
+		this.cards.add(card);
 	}
 
 	public boolean isBusted() {
@@ -27,7 +27,11 @@ public class Hand implements IHand {
 	}
 
 	public int getPoints() {
-		return firstCard.getPoints() + secondCard.getPoints() + thirdCard.getPoints();
+		int total = 0;
+		for (ICard card : this.cards) {
+			total += card.getPoints();
+		}
+		return total;
 	}
 
 }
