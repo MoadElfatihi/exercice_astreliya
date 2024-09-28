@@ -35,13 +35,13 @@ public class TestStep1 {
 		assertTrue(10 == card.getPoints());
 	}
 
-//	@Test
-//	public void should_value_eleven_when_card_displays_ace() {
-//		ICard card = new Card("A");
-//
-//		assertTrue(11 == card.getPoints());
-//	}
-//
+	@Test
+	public void should_value_eleven_when_card_displays_ace() {
+		ICard card = new Card("A");
+
+		assertTrue(11 == card.getPoints());
+	}
+
 //	@Test
 //	public void should_value_eleven_when_card_displays_one() {
 //		ICard card = new Card("1");
