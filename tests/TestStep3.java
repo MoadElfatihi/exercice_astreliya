@@ -20,20 +20,20 @@ public class TestStep3 {
 		assertFalse(hand.isBusted());
 	}
 
-//	@Test
-//	public void should_not_have_blackjack_when_cards_are_ace_and_six_and_four() {
-//		ICard firstCard = new Card("A");
-//		ICard secondCard = new Card("6");
-//		ICard thirdCard = new Card("4");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		hand.addCard(thirdCard);
-//
-//		assertTrue(21 == hand.getPoints());
-//		assertFalse(hand.isBlackJack());
-//		assertFalse(hand.isBusted());
-//	}
-//
+	@Test
+	public void should_not_have_blackjack_when_cards_are_ace_and_six_and_four() {
+		ICard firstCard = new Card("A");
+		ICard secondCard = new Card("6");
+		ICard thirdCard = new Card("4");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		hand.addCard(thirdCard);
+
+		assertTrue(21 == hand.getPoints());
+		assertFalse(hand.isBlackJack());
+		assertFalse(hand.isBusted());
+	}
+
 //	@Test
 //	public void should_not_have_blackjack_when_cards_are_ace_and_eight() {
 //		ICard firstCard = new Card("A");
