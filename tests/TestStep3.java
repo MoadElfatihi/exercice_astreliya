@@ -9,17 +9,17 @@ import blackjack.IHand;
 
 public class TestStep3 {
 
-//	@Test
-//	public void should_have_blackjack_when_cards_are_ace_and_ten() {
-//		ICard firstCard = new Card("A");
-//		ICard secondCard = new Card("10");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		assertTrue(21 == hand.getPoints());
-//		assertTrue(hand.isBlackJack());
-//		assertFalse(hand.isBusted());
-//	}
-//
+	@Test
+	public void should_have_blackjack_when_cards_are_ace_and_ten() {
+		ICard firstCard = new Card("A");
+		ICard secondCard = new Card("10");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		assertTrue(21 == hand.getPoints());
+		assertTrue(hand.isBlackJack());
+		assertFalse(hand.isBusted());
+	}
+
 //	@Test
 //	public void should_not_have_blackjack_when_cards_are_ace_and_six_and_four() {
 //		ICard firstCard = new Card("A");
