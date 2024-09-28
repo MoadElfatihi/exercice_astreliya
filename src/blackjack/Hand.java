@@ -23,7 +23,7 @@ public class Hand implements IHand {
 	}
 
 	public boolean isBlackJack() {
-		return this.cards.size() == 2;
+		return this.cards.size() == 2 && this.getPoints() == 21;
 	}
 
 	public int getPoints() {
