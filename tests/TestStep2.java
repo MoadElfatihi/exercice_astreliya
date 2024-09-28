@@ -27,18 +27,18 @@ public class TestStep2 {
 		assertTrue(14 == hand.getPoints());
 	}
 
-//	@Test
-//	public void should_have_nineteen_points_when_cards_are_eight_and_six_and_five() {
-//		ICard firstCard = new Card("8");
-//		ICard secondCard = new Card("6");
-//		ICard thirdCard = new Card("5");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		hand.addCard(thirdCard);
-//
-//		assertTrue(19 == hand.getPoints());
-//	}
-//
+	@Test
+	public void should_have_nineteen_points_when_cards_are_eight_and_six_and_five() {
+		ICard firstCard = new Card("8");
+		ICard secondCard = new Card("6");
+		ICard thirdCard = new Card("5");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		hand.addCard(thirdCard);
+
+		assertTrue(19 == hand.getPoints());
+	}
+
 //	@Test
 //	public void should_have_seventeen_points_when_cards_are_four_and_five_and_two_and_six() {
 //		ICard firstCard = new Card("4");
