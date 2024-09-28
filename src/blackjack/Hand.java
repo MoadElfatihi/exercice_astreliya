@@ -6,14 +6,16 @@ public class Hand implements IHand {
 
 	private ICard firstCard;
 	private ICard secondCard;
+	private ICard thirdCard;
 	
 	public Hand(ICard firstCard, ICard secondCard) {
 		this.firstCard = firstCard;
 		this.secondCard = secondCard;
+		this.thirdCard = new Card("0");
 	}
 	
 	public void addCard(ICard card) {
-		throw new NotImplementedException();
+		this.thirdCard = card;
 	}
 
 	public boolean isBusted() {
@@ -25,7 +27,7 @@ public class Hand implements IHand {
 	}
 
 	public int getPoints() {
-		return firstCard.getPoints() + secondCard.getPoints();
+		return firstCard.getPoints() + secondCard.getPoints() + thirdCard.getPoints();
 	}
 
 }
