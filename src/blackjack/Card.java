@@ -12,6 +12,10 @@ public class Card implements ICard {
 		if (this.value.equals("K")) {
 			return 10;
 		}
+		if (this.value.equals("A")) {
+			return 11;
+		}
+
 		return Integer.parseInt(this.value);
 	}
 
