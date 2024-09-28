@@ -9,15 +9,15 @@ import blackjack.IHand;
 
 public class TestStep2 {
 
-//	@Test
-//	public void should_have_four_points_when_cards_are_two_and_two() {
-//		ICard firstCard = new Card("2");
-//		ICard secondCard = new Card("2");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		assertTrue(4 == hand.getPoints());
-//	}
-//
+	@Test
+	public void should_have_four_points_when_cards_are_two_and_two() {
+		ICard firstCard = new Card("2");
+		ICard secondCard = new Card("2");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		assertTrue(4 == hand.getPoints());
+	}
+
 //	@Test
 //	public void should_have_fourteen_points_when_cards_are_eight_and_six() {
 //		ICard firstCard = new Card("8");
