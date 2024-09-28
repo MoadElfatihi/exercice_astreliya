@@ -28,13 +28,13 @@ public class TestStep1 {
 		assertTrue(10 == card.getPoints());
 	}
 
-//	@Test
-//	public void should_value_ten_when_card_displays_king() {
-//		ICard card = new Card("K");
-//
-//		assertTrue(10 == card.getPoints());
-//	}
-//
+	@Test
+	public void should_value_ten_when_card_displays_king() {
+		ICard card = new Card("K");
+
+		assertTrue(10 == card.getPoints());
+	}
+
 //	@Test
 //	public void should_value_eleven_when_card_displays_ace() {
 //		ICard card = new Card("A");
