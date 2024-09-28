@@ -12,7 +12,7 @@ public class Card implements ICard {
 		if (this.value.equals("K")) {
 			return 10;
 		}
-		if (this.value.equals("A")) {
+		if (this.value.equals("A") || this.value.equals("1")) {
 			return 11;
 		}
 
