@@ -42,14 +42,14 @@ public class TestStep1 {
 		assertTrue(11 == card.getPoints());
 	}
 
-//	@Test
-//	public void should_value_eleven_when_card_displays_one() {
-//		ICard card = new Card("1");
-//
-//		assertTrue(11 == card.getPoints());
-//
-//	}
-//
+	@Test
+	public void should_value_eleven_when_card_displays_one() {
+		ICard card = new Card("1");
+
+		assertTrue(11 == card.getPoints());
+
+	}
+
 //	@Test(expected = IllegalArgumentException.class)
 //	public void should_throw_arguments_when_card_unknown() {
 //		ICard card = new Card("R");
