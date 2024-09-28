@@ -9,7 +9,7 @@ public class Card implements ICard {
 	}
 	
 	public int getPoints() {
-		if (this.value.equals("K") || this.value.equals("J")) {
+		if (isKingOrJack()) {
 			return 10;
 		}
 		if (isAce()) {
@@ -17,6 +17,10 @@ public class Card implements ICard {
 		}
 
 		return Integer.parseInt(this.value);
+	}
+
+	private boolean isKingOrJack() {
+		return this.value.equals("K") || this.value.equals("J");
 	}
 
 	private boolean isAce() {
