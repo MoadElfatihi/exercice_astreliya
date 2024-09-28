@@ -9,6 +9,9 @@ public class Card implements ICard {
 	}
 	
 	public int getPoints() {
+		if (this.value.equals("K")) {
+			return 10;
+		}
 		return Integer.parseInt(this.value);
 	}
 
