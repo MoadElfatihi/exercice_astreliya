@@ -20,14 +20,14 @@ public class TestStep1 {
 
 		assertTrue(7 == card.getPoints());
 	}
-//
-//	@Test
-//	public void should_value_ten_when_card_displays_ten() {
-//		ICard card = new Card("10");
-//
-//		assertTrue(10 == card.getPoints());
-//	}
-//
+
+	@Test
+	public void should_value_ten_when_card_displays_ten() {
+		ICard card = new Card("10");
+
+		assertTrue(10 == card.getPoints());
+	}
+
 //	@Test
 //	public void should_value_ten_when_card_displays_king() {
 //		ICard card = new Card("K");
