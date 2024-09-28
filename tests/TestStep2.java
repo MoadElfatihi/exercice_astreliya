@@ -39,17 +39,17 @@ public class TestStep2 {
 		assertTrue(19 == hand.getPoints());
 	}
 
-//	@Test
-//	public void should_have_seventeen_points_when_cards_are_four_and_five_and_two_and_six() {
-//		ICard firstCard = new Card("4");
-//		ICard secondCard = new Card("5");
-//		ICard thirdCard = new Card("2");
-//		ICard fourthCard = new Card("6");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		hand.addCard(thirdCard);
-//		hand.addCard(fourthCard);
-//
-//		assertTrue(17 == hand.getPoints());
-//	}
+	@Test
+	public void should_have_seventeen_points_when_cards_are_four_and_five_and_two_and_six() {
+		ICard firstCard = new Card("4");
+		ICard secondCard = new Card("5");
+		ICard thirdCard = new Card("2");
+		ICard fourthCard = new Card("6");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		hand.addCard(thirdCard);
+		hand.addCard(fourthCard);
+
+		assertTrue(17 == hand.getPoints());
+	}
 }
