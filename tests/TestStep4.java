@@ -9,19 +9,19 @@ import blackjack.IHand;
 
 public class TestStep4 {
 
-//	@Test
-//	public void should_have_fifteen_when_cards_are_ten_and_four_and_ace() {
-//		ICard firstCard = new Card("10");
-//		ICard secondCard = new Card("4");
-//		ICard thirdCard = new Card("A");
-//		IHand hand = new Hand(firstCard, secondCard);
-//
-//		hand.addCard(thirdCard);
-//
-//		assertTrue(15 == hand.getPoints());
-//		assertFalse(hand.isBlackJack());
-//		assertFalse(hand.isBusted());
-//	}
+	@Test
+	public void should_have_fifteen_when_cards_are_ten_and_four_and_ace() {
+		ICard firstCard = new Card("10");
+		ICard secondCard = new Card("4");
+		ICard thirdCard = new Card("A");
+		IHand hand = new Hand(firstCard, secondCard);
+
+		hand.addCard(thirdCard);
+
+		assertTrue(15 == hand.getPoints());
+		assertFalse(hand.isBlackJack());
+		assertFalse(hand.isBusted());
+	}
 //
 //	@Test
 //	public void should_have_twenty_two_and_busted_when_cards_are_ten_and_four_and_seven_and_ace() {
