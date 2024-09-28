@@ -28,8 +28,15 @@ public class Hand implements IHand {
 
 	public int getPoints() {
 		int total = 0;
+		boolean aceIsPresent = false;
 		for (ICard card : this.cards) {
 			total += card.getPoints();
+			if (card.getPoints() == 1 || card.getPoints() == 11) {
+				aceIsPresent = true;
+			}
+		}
+		if (total > 21 && aceIsPresent) {
+			total -= 10;
 		}
 		return total;
 	}
