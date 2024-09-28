@@ -9,7 +9,7 @@ public class Card implements ICard {
 	}
 	
 	public int getPoints() {
-		if (this.value.equals("K")) {
+		if (this.value.equals("K") || this.value.equals("J")) {
 			return 10;
 		}
 		if (isAce()) {

@@ -19,7 +19,7 @@ public class Hand implements IHand {
 	}
 
 	public boolean isBusted() {
-		return false;
+		return this.getPoints() > 21;
 	}
 
 	public boolean isBlackJack() {
