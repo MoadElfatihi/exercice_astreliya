@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 public class Hand implements IHand {
 
+	private static final int BLACK_VALUE_VALUE = 21;
+
 	private final ArrayList<ICard> cards = new ArrayList<>();
 	
 	public Hand(ICard firstCard, ICard secondCard) {
@@ -19,11 +21,12 @@ public class Hand implements IHand {
 	}
 
 	public boolean isBusted() {
-		throw new NotImplementedException();
+		return BLACK_VALUE_VALUE < this.getPoints();
 	}
 
 	public boolean isBlackJack() {
-		throw new NotImplementedException();
+		return this.cards.size() == 2
+				&& BLACK_VALUE_VALUE == this.getPoints();
 	}
 
 	public int getPoints() {
