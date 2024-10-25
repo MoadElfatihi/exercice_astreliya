@@ -1,38 +1,54 @@
 package blackjack;
 
-import org.apache.commons.lang.NotImplementedException;
-
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hand implements IHand {
 
-	private static final int BLACK_VALUE_VALUE = 21;
+	private static final int BLACK_JACK_VALUE = 21;
 
 	private final ArrayList<ICard> cards = new ArrayList<>();
-	
-	public Hand(ICard firstCard, ICard secondCard) {
-		this.cards.add(firstCard);
-		this.cards.add(secondCard);
+
+	private List<ICard> cardList = new ArrayList<>();
+
+	public Hand(List<ICard> cardList) {
+		this.cardList = cardList;
 	}
-	
+
 	public void addCard(ICard card) {
-		// Card must not be null
-		this.cards.add(card);
+		this.cardList.add(card);
 	}
 
 	public boolean isBusted() {
-		return BLACK_VALUE_VALUE < this.getPoints();
+		return getPoints() > BLACK_JACK_VALUE;
 	}
 
 	public boolean isBlackJack() {
-		return this.cards.size() == 2
-				&& BLACK_VALUE_VALUE == this.getPoints();
+		return getPoints() == BLACK_JACK_VALUE && cardList.size() == 2;
 	}
 
 	public int getPoints() {
-		return this.cards.stream()
-				.map(ICard::getPoints)
-				.mapToInt(value -> value)
-				.sum();
+		//faisable avec un stream map etc
+		int total = 0;
+		for (ICard card : cardList) {
+			total += card.getPoints();
+			//mettre les as à la fin de la main ?
+			if (total > BLACK_JACK_VALUE && (this.getValues().contains("A") || this.getValues().contains("1"))) {
+				total -= 10;
+			}
+		}
+
+		return total;
 	}
+
+	public List<String> getValues() {
+
+		List<String> values = new ArrayList<>();
+
+		for (ICard card : this.cardList) {
+			values.add(card.getValue());
+		}
+		return values;
+	}
+
 }
