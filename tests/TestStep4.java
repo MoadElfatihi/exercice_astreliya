@@ -7,9 +7,6 @@ import blackjack.Hand;
 import blackjack.ICard;
 import blackjack.IHand;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class TestStep4 {
 
 	@Test
@@ -17,11 +14,9 @@ public class TestStep4 {
 		ICard firstCard = new Card("10");
 		ICard secondCard = new Card("4");
 		ICard thirdCard = new Card("A");
-		List<ICard> cardList = new ArrayList<>();
-		cardList.add(firstCard);
-		cardList.add(secondCard);
-		cardList.add(thirdCard);
-		IHand hand = new Hand(cardList);
+		IHand hand = new Hand(firstCard, secondCard);
+		
+		hand.addCard(thirdCard);
 		
 		assertTrue(15 == hand.getPoints());
 		assertFalse(hand.isBlackJack());
@@ -34,12 +29,10 @@ public class TestStep4 {
 		ICard secondCard = new Card("4");
 		ICard thirdCard = new Card("7");
 		ICard fourthCard = new Card("A");
-		List<ICard> cardList = new ArrayList<>();
-		cardList.add(firstCard);
-		cardList.add(secondCard);
-		cardList.add(thirdCard);
-		cardList.add(fourthCard);
-		IHand hand = new Hand(cardList);
+		IHand hand = new Hand(firstCard, secondCard);
+		
+		hand.addCard(thirdCard);
+		hand.addCard(fourthCard);
 		
 		assertTrue(22 == hand.getPoints());
 		assertFalse(hand.isBlackJack());
@@ -51,11 +44,9 @@ public class TestStep4 {
 		ICard firstCard = new Card("A");
 		ICard secondCard = new Card("1");
 		ICard thirdCard = new Card("A");
-		List<ICard> cardList = new ArrayList<>();
-		cardList.add(firstCard);
-		cardList.add(secondCard);
-		cardList.add(thirdCard);
-		IHand hand = new Hand(cardList);
+		IHand hand = new Hand(firstCard, secondCard);
+		
+		hand.addCard(thirdCard);
 		
 		assertTrue(13 == hand.getPoints());
 		assertFalse(hand.isBlackJack());
@@ -68,12 +59,10 @@ public class TestStep4 {
 		ICard secondCard = new Card("1");
 		ICard thirdCard = new Card("1");
 		ICard lastCard = new Card("A");
-		List<ICard> cardList = new ArrayList<>();
-		cardList.add(firstCard);
-		cardList.add(secondCard);
-		cardList.add(thirdCard);
-		cardList.add(lastCard);
-		IHand hand = new Hand(cardList);
+		IHand hand = new Hand(firstCard, secondCard);
+		
+		hand.addCard(thirdCard);
+		hand.addCard(lastCard);
 		
 		assertTrue(14 == hand.getPoints());
 		assertFalse(hand.isBlackJack());
@@ -86,12 +75,10 @@ public class TestStep4 {
 		ICard secondCard = new Card("6");
 		ICard thirdCard = new Card("4");
 		ICard lastCard = new Card("A");
-		List<ICard> cardList = new ArrayList<>();
-		cardList.add(firstCard);
-		cardList.add(secondCard);
-		cardList.add(thirdCard);
-		cardList.add(lastCard);
-		IHand hand = new Hand(cardList);
+		IHand hand = new Hand(firstCard, secondCard);
+		
+		hand.addCard(thirdCard);
+		hand.addCard(lastCard);
 		
 		assertTrue(12 == hand.getPoints());
 		assertFalse(hand.isBlackJack());

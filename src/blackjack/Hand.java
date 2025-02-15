@@ -26,7 +26,20 @@ public class Hand implements IHand {
 	}
 
 	public int getPoints() {
-		return this.cardList.stream().mapToInt(card->card.getPoints()).sum();
+		var sum = this.cardList.stream().mapToInt(card -> card.getPoints()).sum();
+		if (sum <= 21) return sum;
+		else {
+			int totalAs = (int) this.cardList.stream()
+					.filter(card -> card.getPoints() == 11)
+					.count();
+			return recursiveSumBreaker(sum, totalAs);
+		}
 	}
+	public int recursiveSumBreaker(int sum,int totalAs){
+		if (sum <=21 || totalAs ==0) return sum;
+		return recursiveSumBreaker(sum-10, totalAs-1);
+		// by removing 10 we essentially convert the value of A from 11 to 1
+	}
+
 
 }
