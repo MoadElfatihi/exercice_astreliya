@@ -18,11 +18,11 @@ public class Hand implements IHand {
 	}
 
 	public boolean isBusted() {
-		throw new NotImplementedException();
+		return ( getPoints()>21 );
 	}
 
 	public boolean isBlackJack() {
-		throw new NotImplementedException();
+		return (this.cardList.size()==2 && getPoints()==21);
 	}
 
 	public int getPoints() {
