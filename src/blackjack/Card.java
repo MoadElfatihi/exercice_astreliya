@@ -1,23 +1,18 @@
 package blackjack;
 
 public class Card implements ICard {
-	String value;
+	private String value;
 	public Card(String value) {
-		this.value = value;
+		this.value=value;
 	}
-
-	public String getValue() {
-		return this.value;
-	}
-
+	
 	public int getPoints() {
-		if (value.equals("J") || value.equals("Q") || value.equals("K")) {
-			return 10;
-		}
-		if (value.equals("A") || value.equals("1")) {
-			return 11;
-		}
-		return Integer.parseInt(value);
+		if (value.matches("[J|Q|K]")) return 10;
+		else if (value.matches("A|1")) return 11;
+		else return Integer.parseInt(value);// add try catch if necessary
+	}
+	public String getValue(){
+		return value;
 	}
 
 }
