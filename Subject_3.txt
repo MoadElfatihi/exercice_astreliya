@@ -28,9 +28,4 @@ Pour reussir cette etape, il est necessaire que les tests des fichiers
 BlackJackTest.java,
 TestStep1.java et DeckTest.java reussissent.
 
-Merci les tests reussissent
 
-PS: i can't find these classes BlackJackTest.java,TestStep1.java et DeckTest.java
-PS2: même remarque ^ mais je présume que c'est Step2 et Step3 et ainsi de suite..
-PS3: meme remarque
-PS4: même remarque
