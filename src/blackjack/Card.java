@@ -8,7 +8,7 @@ public class Card implements ICard {
 	}
 	
 	public int getPoints() {
-		if("K".equals(this.value)){
+		if("K".equals(this.value)||"J".equals(this.value)||"K".equals(this.value)){
 			return 10;
 		}
 		else if("A".equals(this.value) || "1".equals(this.value)){
@@ -22,7 +22,9 @@ public class Card implements ICard {
 
 		return valueToNumber;
 	}
-
+	public String getValue(){
+		return value;
+	}
 	private int convertToNumber(String value){
 		try {
 			final int i = Integer.parseInt(value);
