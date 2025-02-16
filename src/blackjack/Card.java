@@ -20,7 +20,7 @@ public class Card implements ICard {
 			return valueToNumber;
 		}
 
-		throw new IllegalArgumentException("unknown value");
+		return valueToNumber;
 	}
 
 	private int convertToNumber(String value){

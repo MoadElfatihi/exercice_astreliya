@@ -1,8 +1,9 @@
 package blackjack;
 
 public interface IHand {
-	void addCard(ICard card);
-	boolean isBusted();
-	boolean isBlackJack();
-	int getPoints();
+	public void addCard(ICard card);
+	
+	public boolean isBusted();
+	public boolean isBlackJack();
+	public int getPoints();
 }
